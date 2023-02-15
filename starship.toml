@@ -1,0 +1,95 @@
+# ~/.config/starship.toml
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Change the default prompt format
+format = """
+[░▒▓](#684396)\
+$os\
+$shell\
+[](bg:#492877 fg:#684396)\
+$localip\
+$hostname\
+$sudo\
+$directory\
+[](fg:#492877 bg:#2b0c59)\
+$git_branch\
+$git_status\
+[](fg:#2b0c59 bg:#1a0241)\
+$nodejs\
+$php\
+[](fg:#1a0241 bg:#18022d)\
+$time\
+[ ](fg:#18022d)\
+\n$character"""
+
+[directory]
+style = "fg:#58c712 bg:#492877"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#2b0c59"
+format = '[[ $symbol $branch ](fg:#492877 bg:#2b0c59)]($style)'
+
+[git_status]
+style = "bg:#2b0c59"
+format = '[[($all_status$ahead_behind )](fg:#492877 bg:#2b0c59)]($style)'
+
+
+[nodejs]
+symbol = ""
+style = "bg:#1a0241"
+format = '[[ $symbol ($version) ](fg:#492877 bg:#1a0241)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#1a0241"
+format = '[[ $symbol ($version) ](fg:#492877 bg:#1a0241)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#18022d"
+format = '[[  $time ](fg:#58c712 bg:#18022d)]($style)'
+
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol :](fg:#58c712 bg:#492877)[$hostname](fg:#58c712 bg:#492877)'
+trim_at = '.companyname.com'
+disabled = false
+
+[localip]
+ssh_only = true
+format = '[$localipv4:](fg:#58c712 bg:#492877)'
+disabled = false
+
+[os]
+format = "[ $symbol](bg:#684396 fg:#58c712)"
+disabled = false
+[os.symbols]
+Windows = " "
+Ubuntu = ""
+Unknown = "❓"
+
+[shell]
+format = '[$indicator]($style)'
+cmd_indicator = ''
+bash_indicator = ''
+powershell_indicator = '_'
+unknown_indicator = '❓'
+style = 'bg:#684396 fg:#58c712'
+disabled = false
+[sudo]
+format = '[$symbol](fg:#58c712 bg:#492877)'
+allow_windows = true
+disabled = false
