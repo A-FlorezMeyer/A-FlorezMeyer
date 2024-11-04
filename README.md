@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @A-FlorezMeyer
-- 👀 I’m interested in electronics engineering
-- 🌱 I’m currently learning electronics engineering
+- 👀 I’m interested in electronics engineering, cybersecurity and data analysis
+- 🌱 electronics engineering
 - 📫 How to reach me andres.florez.meyer@gmail.com
 
 <!---
